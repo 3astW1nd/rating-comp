@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="card" id="card">
+      <!-- Rating state start -->
+
+      <div class="rating-card">
+        <div class="icon">
+          <img src="./images/icon-star.svg" alt="star icon">
+        </div>
+
+        <h2>
+          How did we do?
+        </h2>
+      
+        <p>
+          Please let us know how we did with your support request. All feedback is appreciated 
+          to help us improve our offering!
+        </p>
+      
+        <div class="btns">
+          <button type="button" onclick="handleInput(this)">1</button>
+          <button type="button" onclick="handleInput(this)">2</button> 
+          <button type="button" onclick="handleInput(this)">3</button>
+          <button type="button" onclick="handleInput(this)">4</button>
+          <button type="button" onclick="handleInput(this)">5</button>
+        </div>
+      
+        <button type="submit" class="submit-btn" id="sub" onclick="submitInput">
+          Submit
+        </button>
+      </div>
+       
+    
+
+    
+      <!-- Rating state end -->
+    
+      <!-- Thank you state start -->
+       <div class="end-card">
+        <div class="ty-image">
+          <img src="./images/illustration-thank-you.svg" alt="thank you svg">
+        </div>
+
+        <div class="prompt">
+          <div class="p-child" id="ans">
+            You selected 4 here out of 5
+          </div>
+        </div>
+       
+        <h2>
+          Thank you!
+        </h2>
+       
+        <p>
+          We appreciate you taking the time to give a rating. If you ever need more support, 
+          don’t hesitate to get in touch!
+        </p>
+
+       </div>
+    
+    
+      <!-- Thank you state end -->
+    </div>
+  </div>
+
+
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer>
+
+
+  <script>    
+
+    function handleInput(obj) {
+      // change the inner text content of the thank you screen p-child
+      var newStr = "You selected " + obj.textContent + " here out of 5";
+      const currentObj = document.getElementById('ans');
+      currentObj.textContent = newStr; 
+
+      obj.setAttribute("style", "background-color: white; color: hsl(215.29, 20.48%, 16.27%);")
+    }
+
+    function submitInput() {
+      const card = document.getElementById('card');
+      card.setAttribute("style", "transform: rotateY(180deg);");
+    }
+
+    const t = document.getElementById("sub");
+    t.addEventListener("click", submitInput);
+
+  </script>
+</body>
+</html>

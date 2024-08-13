@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+html, body {
+    width: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: hsl(228, 11.11%, 8.82%);
+    font-family: "Overpass", sans-serif;
+    color: white;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.card {
+    background-color: hsl(215.29, 20.48%, 16.27%);
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+    padding-left: 1.9rem;
+    padding-right: 2rem;
+    max-width: 356px;
+    border-radius: 25px;
+
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+    
+}
+
+.icon {
+    background-color: hsl(211.58, 20.43%, 18.24%);
+    width: fit-content;
+    padding: 0.8rem;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+
+.rating-card > h2 {
+    font-size: 28px;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.rating-card > p {
+    color: hsl(0, 0%, 100%, 0.5);
+    line-height: 24px;
+    font-size: 15px;
+    margin-top: 0;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.8rem;
+}
+
+.btns > button {
+    background-color: hsl(211.58, 20.43%, 18.24%);
+    border: none;
+    padding: 0.9rem 1.2rem;
+    border-radius: 50px;
+    color: hsl(0, 0%, 100%, 0.5);
+}
+
+.btns > button:hover {
+    background-color: hsl(25.49, 97.49%, 53.14%);
+    color: hsl(215.29, 20.48%, 16.27%);
+}
+
+.submit-btn {
+    background-color: hsl(25.49, 97.49%, 53.14%);
+    width: 100%;
+    padding: 0.7rem 0rem;
+    border-radius: 20px;
+    border: none;
+    color: hsl(215.29, 20.48%, 16.27%);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.submit-btn:hover {
+    background-color: white;
+}
+
+.rating-card {
+    /* position: absolute; */
+    backface-visibility: hidden;
+}
+
+.end-card {
+    position: absolute;
+    backface-visibility: hidden;
+    /* background-color: pink; */
+    transform: rotateY(180deg);
+    top: 0;
+    left: 0;
+
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 356px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+/* .card:hover {
+    transform: rotateY(180deg);
+} */
+
+.ty-image {
+    display: flex;
+    justify-content: center;
+}
+
+.prompt {
+    display: flex;
+    justify-content: center;
+}
+
+.p-child {
+    background-color: hsl(211.58, 20.43%, 18.24%);
+    color: hsl(25.49, 97.49%, 53.14%);
+    font-size: 12px;
+    margin: 1.8rem 0rem;
+    padding: 0.4rem 0.8rem;
+    width: max-content;
+    border-radius: 20px;
+    margin-bottom: 0.8rem;
+} 
+
+.end-card > h2 {
+    margin-bottom: 0;
+}
+
+.end-card > p {
+    color: hsl(0, 0%, 100%, 0.5);
+    line-height: 24px;
+    font-size: 15px;
+    padding: 0rem 0.5rem;
+    /* margin-top: 0; */
+}
+
+@media screen and (max-width: 767px) {
+    .card {
+        max-width: 300px;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem; 
+    }
+
+    .icon {
+        margin: 0;
+    }
+
+    .rating-card > p {
+        margin-bottom: 1.5rem;
+    }
+
+    .btns {
+        margin-bottom: 1rem;
+    }
+
+    .end-card {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .end-card > h2 {
+        margin-top: 1rem;
+    }
+    
+    .end-card > p {
+        margin-top: 0.5rem;
+        padding: 0;
+    }
+}
